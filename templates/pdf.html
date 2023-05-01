@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        /* Add some styling to the invoice */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        .invoice {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice">
+        <h1>Invoice</h1>
+        <p><strong>Invoice No:</strong> 11432</p>
+        <p><strong>Date:</strong> {{date}}</p>
+        <p><strong>Customer:</strong> {{name}}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{thing}}</td>
+                    <td>Rs.{{price}}</td>
+                </tr>
+               
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td  class="">Total</td>
+                    <td class="">RS. {{price}}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
